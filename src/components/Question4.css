@@ -1,0 +1,119 @@
+/* ==================== Question4.css ==================== */
+/* Theme: Deep Green GitHub Search Interface */
+
+/* 🌈 Global Background */
+
+/* 📦 Card Container */
+
+.card {
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #134547;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔤 Title & Paragraph */
+h2 {
+  color: #134547;
+  font-weight: 600;
+}
+
+p {
+  color: #134547;
+  opacity: 0.9;
+}
+
+/* 🔍 Search Input */
+.search-input {
+  border: 2px solid #134547;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #0d6efd;
+  background-color: #e3f2fd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+}
+
+/* ❌ Clear Button */
+.input-group .btn {
+  border-color: #134547;
+  color: #134547;
+  transition: 0.3s;
+}
+
+.input-group .btn:hover {
+  background-color: #134547;
+  color: #fff;
+}
+
+/* 🧑‍💻 Search Results List */
+.results-list {
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.results-list li {
+  background-color: #ffffff;
+  color: #134547;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.results-list li:hover {
+  background-color: #134547;
+  color: #fff;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/* 🧠 Avatar Styling */
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #134547;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+/* 🌟 Smooth fade effect for results */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 576px) {
+  .card {
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}

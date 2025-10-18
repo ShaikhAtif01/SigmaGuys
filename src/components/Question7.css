@@ -1,0 +1,53 @@
+/* Question7.css */
+
+/* Card hover effect */
+.product-card {
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Sticky header (optional) */
+h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Input focus style */
+input.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+}
+
+/* Spinner alignment */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+/* Question7.css */
+.product-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto; /* makes image responsive */
+  object-fit: contain;
+}

@@ -1,0 +1,177 @@
+/* ==================== THEME COLORS ==================== */
+.nav-link {
+  color: #134547 !important;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #134547 0%, #134547 100%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #134547 !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ==================== LOGIN BUTTON ==================== */
+.btn-theme {
+  background: linear-gradient(to right, #134547 0%, #134547 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(19, 69, 71, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  background: linear-gradient(to right, #0f3a3b 0%, #0f3a3b 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(19, 69, 71, 0.4);
+}
+
+/* ==================== IMAGE FIX ==================== */
+.image-card {
+  border: 2px solid #eaeaea;
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-styled {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .image-card {
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+}
+/* ==================== THEME COLORS ==================== */
+.nav-link {
+  color: #134547 !important;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #134547 0%, #134547 100%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #134547 !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ==================== LOGIN BUTTON ==================== */
+.btn-theme {
+  background: linear-gradient(to right, #134547 0%, #134547 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(19, 69, 71, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  background: linear-gradient(to right, #0f3a3b 0%, #0f3a3b 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(19, 69, 71, 0.4);
+}
+
+/* ==================== IMAGE FIX ==================== */
+.image-card {
+  border: 2px solid #eaeaea;
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-styled {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Text alignment fix (old style) */
+.old-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .image-card {
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .old-text {
+    font-size: 1rem;
+  }
+}
+/* Overlay Text on Image */
+.image-card.position-relative {
+  position: relative;
+}
+
+.image-overlay-text {
+  position: absolute;
+  bottom: 15px; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #134547; /* theme color */
+
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 90%;
+  line-height: 1.4;
+}

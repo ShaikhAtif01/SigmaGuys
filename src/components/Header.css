@@ -1,0 +1,94 @@
+header {
+  background-color: #fff;
+  z-index: 999;
+  /* remove fixed height, use padding for consistency */
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar container padding left/right */
+.navbar.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+/* Navbar brand alignment */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 50px; /* match logo height */
+}
+
+/* Navbar links */
+.nav-link {
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #007bff;
+}
+
+/* Buttons */
+.btn-theme {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  background-color: #0056b3;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    margin: 0 auto;
+  }
+
+  .offcanvas-body .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .offcanvas-body .nav-link:hover {
+    color: #007bff;
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin: 0 15px;
+  }
+
+  /* Reduce extra top/bottom space from navbar-collapse */
+  .navbar-collapse {
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+  }
+
+  /* Fix text-end div alignment */
+  .text-end {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+nav.navbar.navbar-expand-lg.navbar-light.container.flex-column.flex-lg-row {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

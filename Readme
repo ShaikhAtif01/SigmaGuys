@@ -1,0 +1,170 @@
+# React Developer Assignment – All 10 Questions & Answers
+
+src/
+├── components/
+│ ├── Question1.jsx → Question 1: Semantic HTML & Accessibility
+│ ├── Header.jsx → Question 2: CSS Layout (Header + Sidebar)
+│ ├── Question3.jsx → Question 3: JavaScript Event Handling
+│ ├── Question4.jsx → Question 4: React Components & Props
+│ ├── Question5.jsx → Question 5 & 6: State Management 6. Performance Optimization (React.memo / useMemo)
+│ ├
+│ ├── Question7.jsx → Question 7: API Integration & Error Handling
+│ ├── Question8.jsx → Question 8: Security (XSS Prevention)
+│ ├── Question9.jsx → Question 9: Responsive Design (Mobile-First)
+│ └── Question10.jsx → Question 10:
+├── App.jsx → Imports and renders all question components
+├── main.jsx → Renders <App /> to the DOM
+└── Readme → Project overview and answers documentation
+
+## Question 1: Semantic HTML & Accessibility
+
+**Code Reference:** Inline comments in `Question1.jsx`.
+Questions:
+
+1. What are semantic HTML elements and why are they important for accessibility and SEO?
+2. Give three examples of semantic elements and explain their role.
+3. Show how you would make a button accessible for screen readers.
+
+Answers / Explanation:
+
+Question 1: What are semantic HTML elements and why are they important for accessibility and SEO?
+
+**Answer:**
+Semantic HTML elements clearly define the purpose of content, e.g., <header>, <main>, <footer>. They improve accessibility by helping screen readers understand page structure and enhance SEO by making content easier for search engines to index.
+
+Question 1.2: Give three examples of semantic elements and explain their role.
+
+**Answer:**
+
+1. <header> – Top section with logo/navigation.
+2. <main> – Main page content for focus and structure.
+3. <article> – Self-contained content block like a card or post.
+
+Question 1.3: Show how you would make a button accessible for screen readers. **create :line nummber(105)**
+
+**Answer:**
+
+- **Button:** Clear text `"Open Promo Modal"` for screen readers.
+- **Modal Accessibility:**
+  - `role="dialog"` announces modal.
+  - `aria-modal="true"` blocks background interaction.
+
+## Question 2: CSS Layout Challenge (Header + Sidebar)
+
+**File:** `src/components/Header.jsx`
+
+Questions:
+
+1. Write the CSS (using Flexbox or Grid) to create the following layout:
+   - A fixed header at the top.
+   - A sidebar on the left.
+   - A content area that fills the remaining space.
+   - The layout must be responsive (sidebar collapses on small screens).
+
+Answers / Explanation:
+
+**Answer:**
+The layout is implemented in `Header.jsx` using Flexbox for a responsive design.
+
+- **Header:** Fixed at the top with proper styling for mobile view.
+- **Sidebar:** Positioned on the left and collapses automatically on smaller screens.
+- **Content Area:** Fills remaining space and adjusts responsively.  
+  All requirements for a responsive header-sidebar-content layout are applied in the component.
+
+**Code Reference:** Inline comments in `Header.jsx`.
+
+---
+
+## Question 3: ## Question 3: JavaScript Event Handling
+
+**Answer:**
+Event delegation is used to handle events on a parent element instead of individual children. This allows clicks on dynamically added `<li>` items to be captured efficiently. Implemented in `Question3.jsx`.
+
+**File:** `src/components/Questio3.jsx`
+
+---
+
+## Question 4: React Debounced Search
+
+**Answer :**
+Debounced search input is implemented in `Question4.jsx`.
+
+- **Debounce:** Delays API calls 500ms after typing stops to reduce server load and improve UX.
+- **Loading Feedback:** Spinner shown while fetching GitHub users.
+- **Results Handling:** Clickable list of users displayed; selecting opens profile.
+- **Implementation Highlights:** Custom `useDebounce` hook, controlled input, error handling, and smooth search experience.
+
+## Question 5: State Management
+
+**Answer :**
+
+- **Local State:** Managed inside a component using `useState` (e.g., form inputs); use when data is specific to that component.
+- **Global State:** Shared across components (e.g., `cartItems`, user info); use when multiple components need access.
+- **Example:** Global state handled via Context API in `Question5.jsx` (`AppContext` provides `cartItems` and `user`, Lines ~8–61, consumed via `useApp()`).
+
+**File:** `src/components/Question5.jsx`
+
+---
+
+## Question 6: Performance Optimization
+
+**Answer:**
+
+- **Techniques:**
+
+  1. `React.memo` – prevents re-render if props unchanged (ProductCard, Lines ~151–156)
+  2. `useCallback` – memoizes functions like `addToCart`, `updateQty` (Lines ~26–36)
+  3. `useMemo` – memoizes expensive calculations (e.g., total price/quantity)
+
+- **Example:** `useCallback` used in `AppQuestions.jsx` to avoid recreating functions on each render.
+
+## Question 7: API Integration & Error Handling
+
+**Answer:**
+
+- **API Fetch:** `fetchProducts()` uses `async/await` with `try/catch` to fetch from `https://fakestoreapi.com/products` (Lines ~94–112, `Question7MiniCartWithTheme.js`).
+- **Loading State:** Spinner shown while `loading` is true (Lines ~115–120).
+- **Error State:** Error alert with "Retry" button if fetch fails (Lines ~123–130).
+- **User-Friendly UI:** Search bar filters products, responsive grid (`ProductCard`) displays products, mini cart shows cart items (Lines ~140–200).
+- **Performance:** `useCallback` for cart actions, `useMemo` for total calculations (Lines ~26–64).
+
+**File Reference:** `Question7.js`
+
+---
+
+## Question 8: Security in Frontend
+
+**Answer:**
+
+- **XSS Explanation:** Cross-Site Scripting occurs when malicious scripts run in a user's browser via untrusted input.
+- **Prevention in Frontend:** Escape user input, avoid `dangerouslySetInnerHTML`, sanitize inputs with libraries like DOMPurify, and avoid inline scripts.
+- **Example Implementation:** Unsafe vs safe rendering is shown in `Question8.js` (Lines ~45–90).
+
+**File Reference:** `src/components/Question8.js`
+
+## Question 9: Responsive Design & Mobile-First
+
+**Answer (Short Version):**
+
+- **Mobile-First Approach:** Start designing for small screens, then enhance layout for tablets/desktops. Use relative units, flexible grids, and prioritize essential content. Benefits include faster mobile performance and better UX.
+
+- **Example Implementation:** Layout using Flexbox for mobile stacking cards vertically (default) and media queries for larger screens is implemented in `Question9.jsx` (Lines ~25–40).
+
+**File Reference:** `src/components/Question9.jsx`
+
+---
+
+## Question 10: Debugging Challenge
+
+**File:** `src/components/Question10.jsx`
+
+**Question:**
+
+- Fix React counter bug (`count` not updating correctly).
+
+**Answer / Implementation Highlights:**
+
+- Use functional state updater: `setCount(prev => prev + 1)`
+- Correctly updates state for multiple calls
+
+**Code Reference:** Inline comments in `Question10.jsx`.

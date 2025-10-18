@@ -1,0 +1,56 @@
+/* Question9.css */
+
+/* ==================== Container ==================== */
+#question9-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center; /* horizontal center */
+  min-height: 100vh; /* full viewport height */
+  padding: 20px;
+  text-align: center;
+}
+
+/* ==================== Header ==================== */
+#question9-header h1 {
+  margin-bottom: 10px;
+}
+
+/* ==================== Main Content ==================== */
+#question9-main {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: single column */
+  gap: 15px;
+  width: 100%;
+  max-width: 800px; /* limit width on large screens */
+}
+
+#question9-main .question9-card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e8f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+/* ==================== Footer ==================== */
+#question9-footer {
+  margin-top: 20px;
+  color: #134547;
+}
+
+/* ==================== Tablet / Desktop Media Queries ==================== */
+@media (min-width: 600px) {
+  /* Tablet: 2 columns */
+  #question9-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktop: 4 columns */
+  #question9-main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
