@@ -124,7 +124,7 @@ const Header = () => {
           <div className="collapse navbar-collapse w-100 justify-content-between align-items-center mt-3 mt-lg-0 d-none d-lg-flex">
             <Link className="navbar-brand" to="/">
               <img
-                src="src/assets/logo.svg"
+                src="https://www.sigmaguys.com/uploads/logo/logo.svg"
                 alt="logo"
                 width="100"
                 height="50"
