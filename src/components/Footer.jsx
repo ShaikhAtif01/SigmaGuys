@@ -12,7 +12,7 @@ const Footer = () => {
               className="d-flex align-items-center mb-3 text-light text-decoration-none"
             >
               <img
-                src="src/assets/logo.svg"
+                src="https://www.sigmaguys.com/uploads/logo/logo.svg"
                 alt="Logo"
                 width="80"
                 height="40"
